@@ -1,0 +1,194 @@
+*{
+    font-family: 'Lato', sans-serif;
+    color: #efeee9;
+}
+
+body{
+    width: 100%;
+    height: 900px;
+    margin: 0px;
+    font-family: 'Lato', sans-serif;
+    background-image: url('../images/sunshine.jpg');
+    background-position: center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+/** HEADER **/
+header {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav a{
+    text-decoration: none;
+    display: inline-flex;
+    color: #efeee9;
+    background-color: #2c314f;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 0px 10px;
+    font-size: 1rem;
+    width: 110px;
+    border: #efeee9 2px solid;
+    justify-content: center;
+}
+
+nav a:hover{
+    border: #2c314f 2px solid;
+    color: #2c314f;
+    background-color: #efeee9;
+}
+
+#logo {
+    height: 100px;
+    margin: 10px;
+    border: #efeee9 3px solid;
+    border-radius: 20px;
+}
+
+#currentpage{       
+    /**Changes the color of the navigation button of the current page.**/
+    border: #2c314f 2px solid;
+    color: #2c314f;
+    background-color: #efeee9;
+}
+
+/** DROPDOWN COURSES**/
+#dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+#dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+}
+
+#dropdown-content a{
+    background-color: #aaa;
+    border: 2px solid #aaa;
+    font-size: 0.75rem;
+    text-align: center;
+    border: 2px solid #2c314f;
+}
+
+#dropdown-content a:hover{
+    background-color: #efeee9;
+    border: 2px solid #2c314f;
+}
+  
+#dropdown:hover #dropdown-content {
+    display: block;
+}
+
+/** MIDDLE SECTION **/
+h1, h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+}
+
+#banner{
+    flex-flow: column wrap;
+    text-align: center;
+    display: flex;
+    width: 100%;
+    background-color: rgba(44, 49, 79, 0.5);
+    margin-top: 40px;
+}
+
+.disclaimer{
+    display: none;
+}
+
+/* HAMBURGER MENU */
+.hamburgerNav {
+    overflow: hidden;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 10px;
+    text-align: center;
+    display: none;
+    width: auto;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .hamburgerNav #myLinks {
+    display: none;
+    background-color: #aaa;
+    color: #7acdcf;
+    border-radius: 20px;
+    border: #2c314f 1px solid;
+    height: auto;
+  }
+
+  #myLinks a{
+      color: #2c314f;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 20px;
+  }
+
+  #myLinks a:hover{
+    background-color: #7acdcf;
+
+    }
+  
+  /* Style navigation menu links */
+  .hamburgerNav a {
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .hamburgerNav a:hover {
+    color: #2c314f;
+    text-align: right;
+  }
+
+  .hamburgerNav i{
+      color: #efeee9;
+      border: #efeee9 1px solid;
+      padding: 14px 16px;
+      border-radius: 10px;
+  }
+
+/* MEDIA */
+@media only screen and (max-width: 768px){
+    h1, h2{
+        font-size: 1rem;
+    }
+    
+    #logo {
+        height: 70px;
+        margin: 5px;
+        border: #efeee9 1px solid;
+        border-radius: 20px;
+    }
+
+    .hamburgerNav{
+        display: block;
+    }
+
+    .regularNav{
+        display: none;
+    }
+}
+
+
+
+    

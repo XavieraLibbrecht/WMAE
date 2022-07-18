@@ -1,0 +1,683 @@
+/* GENERIC */
+*{
+    font-family: 'Lato', sans-serif;
+    color: #2c314f;
+}
+
+body{
+    width: 100%;
+    min-height: 100%;
+    margin: 0px;
+    background-color: #efeee9;
+    display: block;
+}
+
+main{
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+}
+
+h1, h2, h3, p{
+    text-align: left;
+    padding: 10px;
+    margin: 10px;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    color: #2c314f;
+    text-transform: uppercase;
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #7acdcf;
+}
+
+h3{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    padding: 10px;
+    font-weight: 900;
+}
+
+strong{
+    color:#aaa;
+    font-family: "Lato Black", sans-serif;
+}
+
+ul {
+    list-style: none; /* Remove default bullets */
+}
+
+ul li::before {
+    content: "\2022";       /* Add content: unicode for a bullet */
+    color: #7acdcf;       /* Change the color */
+    display: inline-block;  /* Needed to add space between the bullet and the text */
+    width: 1em;             /* Also needed for space (tweak if needed) */
+    margin-left: -1em;      /* Also needed for space (tweak if needed) */
+}
+
+/* HEADER */
+header {
+    position: sticky;
+    top: 0;
+    background: url('../images/header.jpeg');
+    background-position: -150px -60px;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    border: #2c314f 2px solid;
+}
+
+nav{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a{
+    text-decoration: none;
+    display: inline-flex;
+    color: #efeee9;
+    background-color: #2c314f;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+    margin: 1px 10px;
+    width: 110px;
+    border: #efeee9 2px solid;
+    justify-content: center;
+}
+
+nav a:hover{
+    border: #2c314f 2px solid;
+    color: #2c314f;
+    background-color: #efeee9;
+}
+
+#logo {
+    height: 100px;
+    margin: 10px;
+    border: #2c314f 3px solid;
+    border-radius: 20px;
+}
+
+#currentpage{
+    border: #2c314f 2px solid;
+    color: #2c314f;
+    background-color: #efeee9;
+}
+
+/* HAMBURGER MENU */
+.hamburgerNav {
+    overflow: hidden;
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    margin: 10px;
+    text-align: center;
+    display: none;
+    width: auto;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .hamburgerNav #myLinks {
+    display: none;
+    background-color: #aaa;
+    color: #7acdcf;
+    border-radius: 20px;
+    border: #2c314f 1px solid;
+    height: auto;
+  }
+
+  #myLinks a{
+      color: #2c314f;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 20px;
+  }
+
+  #myLinks a:hover{
+    background-color: #7acdcf;
+
+    }
+  
+  /* Style navigation menu links */
+  .hamburgerNav a {
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .hamburgerNav a:hover {
+    color: #2c314f;
+    text-align: right;
+  }
+
+    .hamburgerNav i{
+        color: #2c314f;
+        background-color: #efeee9;
+        border: #2c314f 1px solid;
+        padding: 14px 16px;
+        border-radius: 10px;
+    }
+
+/* DROPDOWN COURSES */
+#dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+#dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+}
+
+#dropdown-content a{
+    background-color: #aaa;
+    font-size: 0.75rem;
+    text-align: center;
+    border: 2px solid #2c314f;
+}
+
+#dropdown-content a:hover{
+    background-color: #efeee9;
+    border: 2px solid #2c314f;
+}
+  
+#dropdown:hover #dropdown-content{
+    display: block;
+}
+
+/*FOOTER*/
+footer{
+    background-color: #aaa;
+    color: #2c314f;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footerIcon{
+    color:#2c314f;
+}
+
+footer p{
+    font-size: 0.85rem;
+    margin: 0px;
+    padding: 3px;
+}
+
+#footerContact{
+    position: absolute;
+    bottom: 0;
+}
+
+.disclaimer{
+    display: none;
+}
+
+/* COURSES */
+    /** 1) Course navigation **/
+        .topnav {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding-bottom: 5px;
+        }
+        
+        .topnav a {
+            text-decoration: none;
+            color: #efeee9;
+            border: #7acdcf 1px solid;
+            background-color: #7acdcf;
+            padding: 3px;
+            margin: 3px;
+            border-radius: 10px;
+            text-align: center;
+            flex-grow: 1;
+            width: 70px;
+        }
+        
+        .topnav a:hover {
+            color: #2c314f;
+            border: #2c314f 1px solid;
+            background-color:#efeee9;
+        }
+
+        #currentcourse{
+            background-color:#efeee9;
+            color: #2c314f;
+            border: #2c314f 1px solid;
+        }
+
+        #botnav{
+            display: none;
+        }
+
+    /** 2) Courses overview & specific page**/
+        #courses{
+            display: inline-flex;
+            flex-flow: row wrap;
+            width: 100%;
+        }
+
+        #course{
+            border: 2px solid #2c314f;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+            width: 380px;
+            height: 380px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #course h2, #course p{
+            text-align: center;
+        }
+
+        #courseinfo h1{
+            text-align: center;
+        }
+
+        #photo{
+            border: 2px solid #2c314f;
+            border-radius: 10px;
+            margin: 10px;
+            overflow: hidden;
+            width: 400px;
+            height: 400px;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button{
+            border:#7acdcf 1px solid;
+            border-radius: 10px;
+            background-color: #7acdcf;
+            padding: 15px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        
+        button:hover{
+            background-color: #efeee9;
+            color: #7acdcf;
+        }
+        
+        #upcoming{
+            border: 2px solid #2c314f;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+            width: 380px;
+            height: 380px;
+            flex-grow: 2;
+            flex-basis: 2;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #upcoming p{
+            margin: 0px;
+            padding: 0px;
+        }
+
+    /** 3) Specific courses **/
+        #container{
+            display: inline-flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            margin: 20px;
+            width: 100%;
+        }
+
+    /** 4) Host a course **/
+        #host{
+            margin: 20px;
+            width: 100%;
+        }
+
+    /** 5) Schedule box **/
+    table{
+        padding: 10px;
+        margin: 10px;
+    }
+
+    /** 6) Mobile Schedule **/
+   #mobileSchedule{
+        border: 2px solid #2c314f;
+        border-radius: 10px;
+        margin: 10px;
+        padding: 10px;
+        width: 380px;
+        height: 380px;
+        display: none;
+        flex-grow: 1;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+   } 
+
+/*SCHEDULE PAGE*/
+    #scheduleBox{
+        display: inline-flex;
+        flex-wrap: wrap;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #scheduleBox h2, #scheduleBox p{
+        text-align: center;
+    }
+
+    #courseRow{
+        border: 2px solid #2c314f;
+        border-radius: 20px;
+        padding: 10px;
+        margin: 20px;
+    }
+
+    #courseRow p{
+        padding: 0px;
+        margin: 5px;
+        text-align: left;
+    }
+
+/* PARTNERS PAGE */
+#partners{
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#subpartners{
+    margin: 10px;
+    flex-grow: 1;
+    display: inline-grid;
+    justify-items: center;
+}
+
+#subpartners h1{
+    text-align: center;
+}
+
+#partnerbox{
+    border: #2c314f solid 2px;
+    margin: 10px;
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+#logos{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around
+}
+
+#partnerlogo{
+    max-width: 280px;
+    max-height: 280px;
+}
+
+/* INSTRUCTOR PAGE */
+#instructors{
+    display: inline-flex;
+    flex-flow: row wrap;
+    width: 100%;
+    overflow: hidden; /* remove this later */
+}
+
+#instructor{
+    border: #2c314f 2px solid;
+    display: inline-flex;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+}
+
+#generalinfo{
+    text-align: center;
+    flex-basis: 400px;
+}
+
+#generalinfo h1, #generalinfo h2{
+    text-align: center;
+}
+
+#bio{
+    margin: 10px;
+    text-align: center;
+    flex-basis: 700px;
+}
+
+#pic{
+    margin: 10px;
+    display: inline-flex;
+    justify-content: center;
+    flex-basis: 330px;
+}
+
+#profilePic{
+    border: #aaa 2px solid;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+#actionPic{
+    border: #2c314f 1px solid;
+    border-radius: 20px;
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    object-fit: cover;
+}
+
+#instructor p{
+    text-align: justify;
+}
+
+.fa-solid{
+    color:#7acdcf;
+    padding: 5px;
+    margin: 10px;
+}
+
+/* CONTACT FORM */
+#contact{
+    display: inline-flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#contact h2{
+    text-align: center;
+}
+
+form{
+    display: inline-flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+}
+
+input, select, textarea {
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    border: #7acdcf 1px solid;
+}
+
+#submitDiv{
+    display: inline-flex;
+    justify-content: center;
+}
+
+#submit{
+    background-color: #7acdcf;
+    min-width: 100px;
+    text-align: center;
+}
+
+#submit:hover{
+    background-color: #efeee9;
+    color: #2c314f;
+    border: #2c314f 1px solid;
+}
+
+
+/*SPECIFIC to phones:*/
+
+/* GENERAL*/
+@media only screen and (max-width: 768px){
+    h1{
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    h2{
+        font-size: 0.9rem;
+        padding: 0;
+    }
+
+    #logo {
+        height: 70px;
+        margin: 5px;
+        border: #efeee9 1px solid;
+        border-radius: 20px;
+    }
+
+    footer p{
+            font-size: 0.65rem;
+    }
+
+    .hamburgerNav{
+        display: block;
+    }
+
+    .regularNav{
+        display: none;
+    }
+}
+
+    /*INSTRUCTORS*/
+@media only screen and (max-width: 768px){
+    #profilePic{
+        border: #aaa 2px solid;
+        height: 100px;
+        width: 100px;
+        border-radius: 20px;
+    }
+
+    #pic{
+        display: none;
+    }
+
+    #instructor{
+        display: block;
+    }
+}
+
+    /* COURSES:*/
+@media only screen and (max-width: 768px){
+
+    #course{
+        height: auto;
+    }
+    #photo{
+        display: none;
+    }
+
+    #mobileSchedule{
+        display: flex;
+    }
+
+    #upcoming{
+        display: none;
+    }
+
+    #botnav{
+        display: flex;
+        padding-top: 10px;
+    }
+
+}
+
+    /* PARTNERS:*/
+@media only screen and (max-width: 768px){
+    #partnerbox{
+        height: auto;
+        width: auto;
+        overflow: hidden;
+        border: 0px;
+    }
+
+    #partnerlogo{
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    #subpartners{
+        border: 1px #2c314f solid;
+        border-radius: 20px;
+    }
+}
+
+    /* CONTACT */
+@media only screen and (max-width: 768px){
+
+}
+
