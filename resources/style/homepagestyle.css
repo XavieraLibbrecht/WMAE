@@ -91,9 +91,16 @@ nav a:hover{
 }
 
 /** MIDDLE SECTION **/
+h1{
+    font-size: 5rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
 h1, h2{
     font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
 }
 
 #banner{
@@ -101,7 +108,7 @@ h1, h2{
     text-align: center;
     display: flex;
     width: 100%;
-    background-color: rgba(44, 49, 79, 0.5);
+    background-color: rgba(44, 49, 79, 0.3);
     margin-top: 40px;
 }
 
@@ -125,7 +132,7 @@ h1, h2{
   .hamburgerNav #myLinks {
     display: none;
     background-color: #aaa;
-    color: #7acdcf;
+    color: rgb(0,33,148);
     border-radius: 20px;
     border: #2c314f 1px solid;
     height: auto;
@@ -139,7 +146,7 @@ h1, h2{
   }
 
   #myLinks a:hover{
-    background-color: #7acdcf;
+    background-color:#efeee9;
 
     }
   
@@ -168,6 +175,21 @@ h1, h2{
   }
 
 /* MEDIA */
+
+@media only screen and (max-width: 1024px) {
+    h1{
+        font-size: 3rem;
+    }
+
+    .hamburgerNav{
+        display: block;
+    }
+
+    .regularNav{
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 768px){
     h1, h2{
         font-size: 1rem;
