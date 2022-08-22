@@ -138,7 +138,7 @@ nav a:hover{
     background-color: #aaa;
     color: rgb(0,33,148);
     border-radius: 20px;
-    border: rgb(0,33,148)) 1px solid;
+    border: rgb(0,33,148) 1px solid;
     height: auto;
   }
 
@@ -654,7 +654,7 @@ input, select, textarea {
     #courseRow{
         padding: 0px;
     }
-
+}
 
 /*SPECIFIC to phones:*/
 
