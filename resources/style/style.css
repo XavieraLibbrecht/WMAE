@@ -472,7 +472,17 @@ footer p{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 1;
+}
+
+#primaryPartnerbox{
+    border: #2c314f solid 2px;
+    margin: 10px;
+    border-radius: 20px;
+    width: 400px;
+    height: 400px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #logos{
@@ -480,12 +490,17 @@ footer p{
     flex-direction: row;
     flex-wrap: wrap;
     align-content: space-around;
-    justify-content: space-around
+    justify-content: center;
 }
 
 #partnerlogo{
     max-width: 280px;
     max-height: 280px;
+}
+
+#primaryPartnerlogo{
+    max-width: 400px;
+    max-height: 400px;
 }
 
 /* INSTRUCTOR PAGE */
