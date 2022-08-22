@@ -616,6 +616,7 @@ input, select, textarea {
 
 #submit{
     background-color: rgb(0,33,148);
+    color: #efeee9;
     min-width: 100px;
     text-align: center;
 }
